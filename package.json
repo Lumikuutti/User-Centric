@@ -1,0 +1,21 @@
+{
+  "name": "user-centric",
+  "version": "1.0.0",
+  "description": "Node.js study exersices",
+  "license": "ISC",
+  "author": "stul",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js", 
+    "dev": "nodemon src/index.js"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.13.0",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^17.13.0",
+    "nodemon": "^3.1.14",
+    "prettier": "3.9.10"
+  }
+}
