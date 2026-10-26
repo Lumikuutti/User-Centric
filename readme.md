@@ -9,7 +9,7 @@ Endpoint || Method || Description || Request Body (Example) || Response Body (Ex
 /items/:id || DELETE || Delete a specific item by its ID || N/A || {"message": "Item Deleted"} || 204 No Content, 404 Not Found
 
 Of week 1's objectives, 1-6 were completed, though the degree to which 5 has been completed remains at the teacher's digression.
-I couldn't get PUT to simply replace the item to be modified, but I couldn't get it to modify the name correctly, and in the assingments objective 5, I'm uncertain how much I completed, as I couldn't quite understand what exactly "e.g. serve some real data, generate something of the data sent to the server" means in this context, as server side handling is so new.
+I couldn't get PUT to simply replace the item to be modified, but I could get it to modify the name correctly, and in the assingments objective 5, I'm uncertain how much I completed, as I couldn't quite understand what exactly "e.g. serve some real data, generate something of the data sent to the server" means in this context, as server side handling is so new.
 
 ![screenshot of testing delete with postman](image.png)
 ![screenshot of testing post with postman](image-1.png)
