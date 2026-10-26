@@ -2,7 +2,7 @@ This testing dummy API lets you GET, POST, PUT and DELETE items from an object a
 
 Endpoint || Method || Description || Request Body (Example) || Response Body (Example) || Status Codes
 
-/ || GET || Welcoming page for the API || N/A || text/html <p>Welcome to the example API</p> || 200 OK, 404 Not Found
+/ || GET || Welcoming page for the API || N/A || HTML page|| 200 OK, 404 Not Found
 
 /items || GET || Retrieve a list of all items || N/A || [{ "id": 1, "name": "Item1" }, { "id": 2, "name": "Item2" }] || 200 OK, 404 Not Found
 
