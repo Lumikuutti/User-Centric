@@ -1,16 +1,16 @@
 console.log('Hello Node.js!');
-
+import {items} from './items';
+import express from 'express';
 import http from 'http';
+
 const hostname = '127.0.0.1';
+const app = express();
 const port = 3000;
 
-//dummy data
-const items = [
-  {id: 1, name: 'Item 1'},
-  {id: 2, name: 'Item 2'},
-  {id: 6, name: 'Item 6'},
-  {id: 8, name: 'Item 8'},
-];
+app.set('view engine', 'pug');
+app.set('views', 'src/views');
+
+app.use(express.static('public'));
 
 //not found function for when trying to reach a non-existent page
 const notFound = (response) => {
