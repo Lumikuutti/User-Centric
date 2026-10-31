@@ -26,6 +26,13 @@ const users = [
   },
 ];
 
+/**
+ * Gets all users in mock data array to the limit, if specified
+ *
+ * @param {number} limit - how many items at most in returned array
+ * @returns {array} - users - an array of users
+ */
+
 const getAllUsers = (limit) => {
   if (limit) {
     return users.slice(0, limit);
@@ -33,15 +40,36 @@ const getAllUsers = (limit) => {
   return users;
 };
 
+/**
+ * Gets an user in mock data array by id
+ *
+ * @param {number} id - id of the user
+ * @returns {user} - userFound - user in array with a matching id
+ */
+
 const getUserById = (id) => {
   const userFound = users.find((item) => id == item.user_id);
   return userFound;
 };
 
+/**
+ * Adds an user in mock data array
+ *
+ * @param {body} item - user to be added
+ */
+
 const addUser = (item) => {
   item.user_id = users[0].user_id + 1;
   users.unshift(item);
 };
+
+/**
+ * Modifies an user in mock data array
+ *
+ * @param {number} id - id of the user
+ * @param {body} modifiedItem - changes to the user
+ * @returns {boolean} - operation success
+ */
 
 const modifyUser = (id, modifiedItem) => {
   const itemIndex = users.findIndex((item) => id == item.user_id);
@@ -53,9 +81,9 @@ const modifyUser = (id, modifiedItem) => {
 };
 
 /**
- * Deletes media item from mock data array
+ * Deletes user from mock data array
  *
- * @param {number} id - id of the media item
+ * @param {number} id - id of the user
  * @returns {boolean} - operation success
  */
 const deleteUser = (id) => {
