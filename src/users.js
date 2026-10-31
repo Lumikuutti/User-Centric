@@ -26,4 +26,45 @@ const users = [
   },
 ];
 
-export default users;
+const getAllUsers = (limit) => {
+  if (limit) {
+    return users.slice(0, limit);
+  }
+  return users;
+};
+
+const getUserById = (id) => {
+  const userFound = users.find((item) => id == item.user_id);
+  return userFound;
+};
+
+const addUser = (item) => {
+  item.user_id = users[0].user_id + 1;
+  users.unshift(item);
+};
+
+const modifyUser = (id, modifiedItem) => {
+  const itemIndex = users.findIndex((item) => id == item.user_id);
+  if (itemIndex > -1) {
+    users[itemIndex] = {...users[itemIndex], ...modifiedItem};
+    return users[itemIndex];
+  }
+  return false;
+};
+
+/**
+ * Deletes media item from mock data array
+ *
+ * @param {number} id - id of the media item
+ * @returns {boolean} - operation success
+ */
+const deleteUser = (id) => {
+  const itemIndex = users.findIndex((item) => id == item.user_id);
+  if (itemIndex > -1) {
+    users.splice(itemIndex, 1);
+    return true;
+  }
+  return false;
+};
+
+export {getAllUsers, getUserById, addUser, modifyUser, deleteUser};
